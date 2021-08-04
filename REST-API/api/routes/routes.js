@@ -2,24 +2,22 @@ const express = require("express");
 
 const router = express.Router();
 
-const LIVEDATA = require("../model/livedata");
+const livedatass = require("../model/livedata");
 
 const mongoose = require("mongoose");
 
 router.get("/", (req, res, next) => {
   res.status(200).json({
-    msg: "This is student get request",
+    msg: "This is a get request",
   });
 });
 
-router.post("/", (req, res, next) => {
-  const livedata = new LIVEDATA({
-    _id: new mongoose.Types.ObjectId(),
-    deviceId: req.body._id,
+router.post("/livedata", (req, res, next) => {
+  const livedata = new livedatass({
+    deviceId: req.body.deviceId,
     level: req.body.level,
     volume: req.body.volume,
     distance: req.body.distance,
-    insert_time: req.body.insert_time,
     weight: req.body.weight,
   });
   livedata
