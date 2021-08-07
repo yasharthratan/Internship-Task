@@ -1,0 +1,21 @@
+{
+  "name": "api_2",
+  "version": "1.0.0",
+  "description": "API to get data ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "API"
+  ],
+  "author": "Yasharth Tripathi",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5",
+    "mqtt": "^4.2.8",
+    "nodemon": "^2.0.12"
+  }
+}
