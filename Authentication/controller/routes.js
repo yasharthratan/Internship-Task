@@ -15,7 +15,7 @@ function checkAuth(req, res, next) {
     );
     next();
   } else {
-    //req.flash("error_messages", "Please Login to continue !");
+    req.flash("error_messages", "Please Login to continue !");
     res.redirect("/login");
   }
 }
@@ -128,6 +128,6 @@ router.get("/profile", checkAuth, (req, res) => {
   });
 });
 
-// router.use(userRoutes);
+router.use(require("./userRoutes"));
 
 module.exports = router;
